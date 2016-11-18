@@ -1,3 +1,1 @@
-@yourhandle, http://asdf.com, this is a description
-@yourhandle, http://heresanother.com, hey here's another link
-@yourhandle, http://newlinkyay.com, I'm gonna try to break it "with"
+@khopsickle, https://medium.com/@khopsickle/2-eggs-and-100-floors-a032beb77aaa#.f4jqjg8ys, A brain teaser/algorithm about eggs.
