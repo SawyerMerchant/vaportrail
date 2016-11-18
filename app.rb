@@ -3,18 +3,20 @@ require 'sinatra/reloader'
 require_relative 'helpers/tweeter'
 require './helpers/cookie_helper.rb'
 require './helpers/content_writer.rb'
+require 'figaro'
 
-  Figaro.application = Figaro::Application.new(
-    environment: 'development',
-    path: File.expand_path('config/application.yml', __FILE__)
-  )
-  Figaro.load
+# Figaro.application = Figaro::Application.new(
+#   environment: 'development',
+#   path: File.expand_path('../config/application.yml', __FILE__)
+# )
+# Figaro.load
 
 
 helpers CookieHelper
 helpers ContentWriter
 
 get "/" do
+  # p ENV["CONSUMER_KEY"]
   handle = request.cookies["handle"] || "@yourhandle"
   link = request.cookies["link"] || "link it!"
   description = request.cookies["description"] || "what's this about?"
