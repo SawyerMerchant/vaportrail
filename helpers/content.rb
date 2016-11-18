@@ -23,9 +23,6 @@ end
 
 # need to make send tweets
 # set daily timer to send next tweet - cron job to wake up Heroku app
-class Tweeter
 
-
-end
 
 

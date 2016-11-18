@@ -1,7 +1,12 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require_relative 'helpers/tweeter'
 
-
+  Figaro.application = Figaro::Application.new(
+    environment: 'development',
+    path: File.expand_path('config/application.yml', __FILE__)
+  )
+  Figaro.load
 
 
 
@@ -16,3 +21,9 @@ post "/add" do
   #TODO redirect to /
 end
 
+
+post "/test" do
+  t = Tweeter.new
+  t.test_tweet
+  redirect("/")
+end
