@@ -1,6 +1,6 @@
+require 'twitter'
+
 class Tweeter
-
-
 
   def initialize
     client = Twitter::REST::Client.new do |config|
@@ -14,5 +14,7 @@ class Tweeter
   def test_tweet
     client.update("A Tweet from the command line")
   end
+
+
 
 end
