@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 require './helpers/tweeter.rb'
 require './helpers/cookie_helper.rb'
 require './helpers/content_writer.rb'
