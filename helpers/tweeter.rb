@@ -17,6 +17,21 @@ class Tweeter
     @client.update("A Tweet from the command line")
   end
 
+  def send_tweet(handle, link, description)
+    @client.update("Checkout#{handle} 's #{description}: #{link}")
+  end
 
+
+  def get_content
+    a = File.readlines("queue.txt")
+    content = a[0]
+    open('queue.txt', 'w') do |file|
+      file.puts a[1,a.size]
+    end
+    p content.split(',')
+  end
 
 end
+
+# t = Tweeter.new
+# t.get_content

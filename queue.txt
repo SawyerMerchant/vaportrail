@@ -1,1 +1,2 @@
-@khopsickle, https://medium.com/@khopsickle/2-eggs-and-100-floors-a032beb77aaa#.f4jqjg8ys, A brain teaser/algorithm about eggs.
+@example2, http://medium.com/example2, Example description2
+@example, http://medium.com/example, Example description
