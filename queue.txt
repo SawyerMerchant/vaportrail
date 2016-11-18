@@ -2,3 +2,5 @@
 @yourhandle, http://newlinkyay.com, another test
 @yourhandle, http://heresanother.com, asdf
 @yourhandle, Http://moareeeeeeeeeeeee.com, hey here's another link
+@example2, http://medium.com/example2, Example description2
+@example, http://medium.com/example, Example description
