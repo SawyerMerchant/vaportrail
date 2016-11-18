@@ -5,7 +5,6 @@ require './helpers/cookie_helper.rb'
 require './helpers/content_writer.rb'
 
 
-helpers Tweeter
 helpers CookieHelper
 helpers ContentWriter
 
