@@ -5,11 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vapor Trails</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <style>
+    body {
+      padding-top: 100px;
+    }
+  </style>
   <!-- <link rel="stylesheet" href="css/screen.css"> -->
 </head>
 <body>
-  <%= yield %>
 
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+          <span class="navbar-brand">Vapor Trails</span>
+          <form action="/queue" method="get" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="submit" value="See the queue!" class="form-control btn btn-info">
+            </div>
+          </form>
+
+          <form action="/" method="get" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="submit" value="Add a Tweet" class="form-control btn btn-info">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
   <!-- JQUERY -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
