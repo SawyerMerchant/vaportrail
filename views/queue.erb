@@ -1,0 +1,18 @@
+<p><a href="<%= erb :domain %>">add some Tweets!</a></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Handle</th>
+      <th>Link</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <% queue.each do |tweet| %>
+  <tr>
+    <% tweet.each do |part| %>
+    <td><%= part %></td>
+    <% end %>
+  </tr>
+  <% end %>
+</table>

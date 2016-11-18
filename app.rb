@@ -2,11 +2,10 @@ require 'sinatra'
 require 'sinatra/reloader'
 require './helpers/tweeter.rb'
 require './helpers/cookie_helper.rb'
-require './helpers/content_writer.rb'
-
+require './helpers/content_helper.rb'
 
 helpers CookieHelper
-helpers ContentWriter
+helpers ContentHelper
 
 get "/" do
   handle = request.cookies["handle"] || "@yourhandle"
@@ -17,6 +16,8 @@ end
 
 post "/add" do
   if params[:handle].empty? || params[:link].empty? || params[:description].empty?
+    redirect("/invalid")
+  elsif (params[:handle] + params[:link] + params[:description]).length > 126
     redirect("/invalid")
   else
     write_new(params[:handle], params[:link], params[:description])
@@ -43,5 +44,7 @@ get "/add" do
 end
 
 get "/queue" do
-  "This is the queue"
+  queue = read_queue
+  queue = [[nil, "Uh oh, the queue is empty...", nil]] if queue == []
+  erb :queue, locals: { queue: queue }
 end
