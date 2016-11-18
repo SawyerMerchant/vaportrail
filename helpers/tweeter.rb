@@ -18,7 +18,7 @@ class Tweeter
   end
 
   def send_tweet(handle, link, description)
-    @client.update("Checkout#{handle} 's #{description}: #{link}")
+    @client.update("Checkout #{handle} 's #{description}: #{link}")
   end
 
 
@@ -28,7 +28,7 @@ class Tweeter
     open('queue.txt', 'w') do |file|
       file.puts a[1,a.size]
     end
-    p content.split(',')
+    content.split(', ')
   end
 
 end
