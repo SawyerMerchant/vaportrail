@@ -20,8 +20,10 @@
     <input type="submit" value="Submit" class="col-xs-3 col-xs-offset-3 btn btn-primary">
 </form>
 
-<form action="/test" method="post">
-  <div class="form-group">
-    <input type="submit" name="test" value="Fire" class="btn btn-danger col-xs-2 col-xs-offset-1">
-  </div>
-</form>
+<% if handle == "@sawyermerchant" %>
+  <form action="/test" method="post">
+    <div class="form-group">
+      <input type="submit" name="test" value="Fire" class="btn btn-danger col-xs-2 col-xs-offset-1">
+    </div>
+  </form>
+<% end %>
