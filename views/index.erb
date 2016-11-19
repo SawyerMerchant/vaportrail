@@ -1,30 +1,27 @@
-<form action="add" method="post">
-  Twitter Handle: <input type="text" name="handle" value="<%= handle if handle %>" ><br>
-
-  Link: <input type="url" name="link" placeholder="<%= link if link %>"><br>
-
-  Description: <input type="text" name="description" placeholder="<%= description if description %>">
-
-  <input type="submit" value="Submit">
-</form>
-
-
-<p>
-Will post to others as:
-<br>
-Checkout @sawyermerchant 's post about programming
-</p>
-
-<p>
-Will post to yours as:
-<br>
-Checkout my post about programming
-</p>
-
-<form action="/queue" method="get">
-  <input type="submit" value="See the queue!">
+<form action="add" method="post" class="form-horizontal">
+  <div class="form-group">
+    <label for="handle" class="control-label col-xs-2 col-xs-2">Handle</label>
+    <div class="col-xs-10">
+      <input type="text" class="form-control" name="handle" value="<%= handle if handle %>" >
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="handle" class="control-label col-xs-2">Link</label>
+    <div class="col-xs-10">
+      <input type="url" class="form-control" name="link" placeholder="<%= link if link %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="handle" class="control-label col-xs-2">Description</label>
+    <div class="col-xs-10">
+      <input type="text" class="form-control" name="description" placeholder="<%= description if description %>">
+    </div>
+  </div>
+    <input type="submit" value="Submit" class="col-xs-3 col-xs-offset-3 btn btn-primary">
 </form>
 
 <form action="/test" method="post">
-  <input type="submit" name="test" value="Fire">
+  <div class="form-group">
+    <input type="submit" name="test" value="Fire" class="btn btn-danger col-xs-2 col-xs-offset-1">
+  </div>
 </form>
