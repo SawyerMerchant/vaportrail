@@ -18,7 +18,7 @@ class Tweeter
   end
 
   def send_tweet(handle, link, description)
-    @client.update("Checkout #{handle} 's #{description}: #{link}")
+    @client.update("Checkout #{handle}'s #{description}: #{link}")
   end
 
 

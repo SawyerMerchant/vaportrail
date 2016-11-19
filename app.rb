@@ -36,7 +36,7 @@ end
 post "/test" do
   t = Tweeter.new
   a = t.get_content
-  t.send_tweet(a[0], a[1], 1[2])
+  t.send_tweet(a[0], a[1], a[2])
   redirect("/")
 end
 
